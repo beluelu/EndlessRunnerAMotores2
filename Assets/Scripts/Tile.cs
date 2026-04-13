@@ -1,24 +1,35 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Tile : MonoBehaviour
 {
     public GameObject obstaclePrefab;
 
-    void Start()
+    public float moveSpeed = 10f;
+
+    void Update()
     {
-        SpawnObstacle();
+        transform.Translate(Vector3.back * moveSpeed * Time.deltaTime);
     }
 
-    void SpawnObstacle()
+    
+    public void SpawnObstacle()
     {
+        if (obstaclePrefab == null) return;
+
         int lane = Random.Range(0, 3);
 
         float laneDistance = 2f;
         float xPos = (lane - 1) * laneDistance;
 
-        Vector3 spawnPosition = new Vector3(xPos, 1, transform.position.z + Random.Range(-8f, 8f));
+        
+        float zOffset = Random.Range(5f, 5f);
+        float zPos = transform.position.z + zOffset;
+
+        Vector3 spawnPosition = new Vector3(xPos, 1, zPos);
 
         GameObject obs = Instantiate(obstaclePrefab, spawnPosition, Quaternion.identity);
+
+        
         obs.transform.SetParent(transform, true);
     }
 }

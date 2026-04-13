@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 public class TileManager : MonoBehaviour
@@ -21,23 +21,55 @@ public class TileManager : MonoBehaviour
 
     void Update()
     {
-        if (player.position.z - 35 > spawnZ - (tilesOnScreen * tileLength))
+        if (activeTiles.Count > 0)
         {
-            SpawnTile();
-            DeleteTile();
+            GameObject lastTile = activeTiles[activeTiles.Count - 1];
+
+            if (lastTile.transform.position.z < (tilesOnScreen * tileLength))
+            {
+                SpawnTile();
+            }
         }
+
+        DeleteTile();
     }
 
     void SpawnTile()
     {
-        GameObject tile = Instantiate(tilePrefab, Vector3.forward * spawnZ, Quaternion.identity);
+        Vector3 spawnPosition;
+
+        if (activeTiles.Count == 0)
+        {
+            spawnPosition = Vector3.forward * spawnZ;
+        }
+        else
+        {
+            GameObject lastTile = activeTiles[activeTiles.Count - 1];
+            spawnPosition = lastTile.transform.position + Vector3.forward * tileLength;
+        }
+
+        GameObject tile = Instantiate(tilePrefab, spawnPosition, Quaternion.identity);
+
+        Tile tileScript = tile.GetComponent<Tile>();
+
+        if (tileScript != null)
+        {
+            
+            if (activeTiles.Count >= 3)
+            {
+                tileScript.SpawnObstacle();
+            }
+        }
+
         activeTiles.Add(tile);
-        spawnZ += tileLength;
     }
 
     void DeleteTile()
     {
-        Destroy(activeTiles[0]);
-        activeTiles.RemoveAt(0);
+        if (activeTiles.Count > 0 && activeTiles[0].transform.position.z < -30)
+        {
+            Destroy(activeTiles[0]);
+            activeTiles.RemoveAt(0);
+        }
     }
 }

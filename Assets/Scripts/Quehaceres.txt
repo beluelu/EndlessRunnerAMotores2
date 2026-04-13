@@ -1,6 +1,6 @@
 QUEHACERES
 
-- hacer que el mundo se mueva para atras en vez del jugador para adelante
+- arreglar pequeños espacios en el mapa
 - rehacer sistema de swipe usando vectores
 - mas espacio entre obstaculos
 - no poner obstaculos al inicio

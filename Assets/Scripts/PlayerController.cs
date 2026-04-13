@@ -15,14 +15,8 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        MoveForward();
         HandleInput();
         MoveToLane();
-    }
-
-    void MoveForward()
-    {
-        transform.Translate(Vector3.forward * forwardSpeed * Time.deltaTime);
     }
 
     void HandleInput()
