@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    [SerializeField] private PauseScreen screen;
+
     [Header("Movimiento")]
     public float forwardSpeed = 10f;
 
@@ -68,6 +70,7 @@ public class PlayerController : MonoBehaviour
     {
         if (other.CompareTag("Obstacle"))
         {
+            screen.GameOver();
             Debug.Log("GAME OVER");
             Time.timeScale = 0f;
         }
