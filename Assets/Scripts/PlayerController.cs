@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour
     public float forwardSpeed = 10f;
 
     [Header("Carriles")]
-    public float laneDistance = 2f; // distancia entre carriles
+    public float laneDistance = 2.5f; // distancia entre carriles
     public float laneChangeSpeed = 10f;
 
     private int currentLane = 1; // 0 = izquierda, 1 = centro, 2 = derecha

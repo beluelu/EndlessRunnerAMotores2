@@ -30,7 +30,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 7, y: 0.1068, z: 20}
+  m_LocalScale: {x: 8, y: 0.1068, z: 20}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -101,6 +101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obstaclePrefab: {fileID: 5434842317604691831, guid: 2737f32336adf104f9630b315740e5f4, type: 3}
+  moveSpeed: 10
 --- !u!65 &2095582611194884320
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -18,7 +18,7 @@ public class Tile : MonoBehaviour
 
         int lane = Random.Range(0, 3);
 
-        float laneDistance = 2f;
+        float laneDistance = 2.5f;
         float xPos = (lane - 1) * laneDistance;
 
         
