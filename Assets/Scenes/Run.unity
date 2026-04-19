@@ -1892,9 +1892,9 @@ GameObject:
   - component: {fileID: 1644267159}
   - component: {fileID: 1644267158}
   - component: {fileID: 1644267157}
-  - component: {fileID: 1644267156}
   - component: {fileID: 1644267155}
   - component: {fileID: 1644267154}
+  - component: {fileID: 1644267156}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1964,6 +1964,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   screen: {fileID: 1842480310}
   forwardSpeed: 10
+  JumpForce: 5
   laneDistance: 2
   laneChangeSpeed: 10
 --- !u!23 &1644267157
@@ -2849,13 +2850,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2115089724}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.13052616, y: -0, z: -0, w: 0.9914449}
-  m_LocalPosition: {x: 0, y: 4.05, z: -10}
+  m_LocalRotation: {x: 0.17364816, y: 0, z: 0, w: 0.9848078}
+  m_LocalPosition: {x: 0, y: 5.38, z: -10.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 15, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 20, y: 0, z: 0}
 --- !u!1001 &8713658899909463819
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -42,6 +42,7 @@ public class PauseScreen : MonoBehaviour
     public void RestartGame()
     {
         Time.timeScale = 1f;
+        Ispaused = false;
         SceneManager.LoadScene("Run");
     }
 

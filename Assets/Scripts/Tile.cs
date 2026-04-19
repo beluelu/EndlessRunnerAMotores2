@@ -2,7 +2,7 @@
 
 public class Tile : MonoBehaviour
 {
-    public GameObject obstaclePrefab;
+    public GameObject[] obstaclePrefab;
 
     public float moveSpeed = 10f;
 
@@ -27,7 +27,9 @@ public class Tile : MonoBehaviour
 
         Vector3 spawnPosition = new Vector3(xPos, 1, zPos);
 
-        GameObject obs = Instantiate(obstaclePrefab, spawnPosition, Quaternion.identity);
+        GameObject chosenObs = obstaclePrefab[Random.Range(0,obstaclePrefab.Length+1)]; //el que pedia la cantidad de objetos en el array era Length, no?
+
+        GameObject obs = Instantiate(chosenObs, spawnPosition, Quaternion.identity);
 
         
         obs.transform.SetParent(transform, true);
