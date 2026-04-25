@@ -1,5 +1,0 @@
-QUEHACERES
-
-- arreglar pequeños espacios en el mapa
-- rehacer sistema de swipe usando vectores
-- jugador salta
