@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
@@ -15,6 +16,7 @@ public class PlayerController : MonoBehaviour
 
     private PlayerAnimation playerAnim;
 
+    public static Action IsGameOver;
 
     void Start()
     {
@@ -91,7 +93,7 @@ public class PlayerController : MonoBehaviour
     {
         if (playerAnim != null)
         {
-            playerAnim.Fall();
+            StartCoroutine(playerAnim.Fall());
         }
     }
 

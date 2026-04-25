@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class PlayerAnimation : MonoBehaviour
@@ -75,9 +76,9 @@ public class PlayerAnimation : MonoBehaviour
 
     public bool isDead = false;
 
-    public void Fall()
+    public IEnumerator Fall()
     {
-        if (isDead) return; // solo evitamos repetir muerte
+        if (isDead) yield return null; // solo evitamos repetir muerte
 
         Debug.Log("ANIM FALL");
 
@@ -95,5 +96,10 @@ public class PlayerAnimation : MonoBehaviour
 
         // activamos caída
         animator.SetTrigger("Fall");
+
+
+        yield return new WaitForSeconds(2f);
+
+        PlayerController.IsGameOver();
     }
 }
