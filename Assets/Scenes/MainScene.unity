@@ -3758,6 +3758,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Section
       objectReference: {fileID: 0}
+    - target: {fileID: 6387879049686379123, guid: a8d82da6d89981c409ff7ed802e633ab, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8368424614338635189, guid: a8d82da6d89981c409ff7ed802e633ab, type: 3}
       propertyPath: zombiePrefab
       value: 
