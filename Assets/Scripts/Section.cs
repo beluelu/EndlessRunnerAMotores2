@@ -45,7 +45,7 @@ public class Section : MonoBehaviour
         GameObject selected = obstacles[randomIndex];
         selected.SetActive(true);
 
-        // 🔥 llamar al script del piso
+        
         Floor floorScript = selected.GetComponent<Floor>();
         if (floorScript != null)
         {

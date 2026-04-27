@@ -42,7 +42,7 @@ public class PlayerController : MonoBehaviour
         if (playerAnim != null && playerAnim.isDead) return;
         if (playerAnim != null && playerAnim.isStumbling) return;
 
-        // -------- POSICIÓN OBJETIVO --------
+       
         float targetX = 0;
 
         if (currentLane == 0) targetX = -laneDistance;
@@ -50,7 +50,7 @@ public class PlayerController : MonoBehaviour
 
         Vector3 targetPosition = new Vector3(targetX, transform.position.y, transform.position.z);
 
-        // -------- SALTO --------
+       
         if (!isGrounded)
         {
             verticalVelocity += gravity * Time.deltaTime;
@@ -65,10 +65,10 @@ public class PlayerController : MonoBehaviour
             isGrounded = true;
         }
 
-        // -------- MOVIMIENTO --------
+       
         transform.position = Vector3.Lerp(transform.position, targetPosition, laneChangeSpeed * Time.deltaTime);
 
-        // 🔥 DESBLOQUEAR CAMBIO DE CARRIL
+        
         if (Mathf.Abs(transform.position.x - targetX) < 0.1f)
         {
             isChangingLane = false;

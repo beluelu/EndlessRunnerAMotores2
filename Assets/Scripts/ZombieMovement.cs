@@ -17,9 +17,6 @@ public class ZombieMovement : MonoBehaviour
         {
             reached = true;
             Debug.Log("Zombie llegó");
-
-            // OPCIONAL:
-            // Destroy(gameObject);  // si querés que desaparezca
         }
     }
 }

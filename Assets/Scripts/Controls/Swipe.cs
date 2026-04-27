@@ -17,7 +17,7 @@ public class Swipe : MonoBehaviour
 
     void Update()
     {
-        // MOBILE
+        
         if (Input.touchCount > 0)
         {
             Touch touch = Input.GetTouch(0);
@@ -36,7 +36,7 @@ public class Swipe : MonoBehaviour
             }
         }
 
-        // PC (para testear)
+        
         if (Input.GetMouseButtonDown(0))
         {
             startPos = Input.mousePosition;

@@ -78,23 +78,23 @@ public class PlayerAnimation : MonoBehaviour
 
     public IEnumerator Fall()
     {
-        if (isDead) yield return null; // solo evitamos repetir muerte
+        if (isDead) yield return null; 
 
         Debug.Log("ANIM FALL");
 
         isDead = true;
 
-        // limpiamos estados
+      
         isRolling = false;
         isJumping = false;
         isStumbling = false;
 
-        // limpiamos triggers
+        
         animator.ResetTrigger("Roll");
         animator.ResetTrigger("Jump");
         animator.ResetTrigger("Stumble");
 
-        // activamos caída
+       
         animator.SetTrigger("Fall");
 
 
