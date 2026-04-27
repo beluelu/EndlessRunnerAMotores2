@@ -8,6 +8,8 @@ public class PlayerController : MonoBehaviour
     public float laneDistance = 3f;
     public float laneChangeSpeed = 10f;
 
+    private bool isChangingLane = false;
+
     private float verticalVelocity = 0f;
     public float jumpForce = 7f;
     public float gravity = -20f;
@@ -28,7 +30,6 @@ public class PlayerController : MonoBehaviour
             swipe.OnSwipeLeft += MoveLeft;
             swipe.OnSwipeRight += MoveRight;
             swipe.OnSwipeUp += Jump;
-            // ❌ swipe.OnSwipeDown += Crouch; ← ELIMINADO
         }
         else
         {
@@ -40,13 +41,14 @@ public class PlayerController : MonoBehaviour
     {
         if (playerAnim != null && playerAnim.isDead) return;
         if (playerAnim != null && playerAnim.isStumbling) return;
-        // -------- MOVIMIENTO LATERAL --------
-        Vector3 targetPosition = new Vector3(0, transform.position.y, transform.position.z);
 
-        if (currentLane == 0)
-            targetPosition += Vector3.left * laneDistance;
-        else if (currentLane == 2)
-            targetPosition += Vector3.right * laneDistance;
+        // -------- POSICIÓN OBJETIVO --------
+        float targetX = 0;
+
+        if (currentLane == 0) targetX = -laneDistance;
+        else if (currentLane == 2) targetX = laneDistance;
+
+        Vector3 targetPosition = new Vector3(targetX, transform.position.y, transform.position.z);
 
         // -------- SALTO --------
         if (!isGrounded)
@@ -63,20 +65,36 @@ public class PlayerController : MonoBehaviour
             isGrounded = true;
         }
 
-        // -------- APLICAR --------
+        // -------- MOVIMIENTO --------
         transform.position = Vector3.Lerp(transform.position, targetPosition, laneChangeSpeed * Time.deltaTime);
+
+        // 🔥 DESBLOQUEAR CAMBIO DE CARRIL
+        if (Mathf.Abs(transform.position.x - targetX) < 0.1f)
+        {
+            isChangingLane = false;
+        }
     }
 
     public void MoveLeft()
     {
+        if (isChangingLane) return;
+
         if (currentLane > 0)
+        {
             currentLane--;
+            isChangingLane = true;
+        }
     }
 
     public void MoveRight()
     {
+        if (isChangingLane) return;
+
         if (currentLane < 2)
+        {
             currentLane++;
+            isChangingLane = true;
+        }
     }
 
     public void Jump()
@@ -101,13 +119,11 @@ public class PlayerController : MonoBehaviour
     {
         if (other.CompareTag("SmallObstacle"))
         {
-            Debug.Log("Choque chico");
             TriggerStumble();
         }
 
         if (other.CompareTag("BigObstacle"))
         {
-            Debug.Log("CHOQUE GRANDE");
             TriggerFall();
         }
     }
@@ -115,8 +131,6 @@ public class PlayerController : MonoBehaviour
     void TriggerStumble()
     {
         if (playerAnim != null && playerAnim.isStumbling) return;
-
-        Debug.Log("STUMBLE");
 
         playerAnim.Stumble();
     }

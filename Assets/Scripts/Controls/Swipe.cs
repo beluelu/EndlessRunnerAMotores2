@@ -6,11 +6,12 @@ public class Swipe : MonoBehaviour
     private Vector2 startPos;
     private Vector2 endPos;
 
-    public float minSwipeDistance = 10f;
+    public float minSwipeDistance = 50f;
+
+    private bool canSwipe = true;
 
     public System.Action OnSwipeLeft;
     public System.Action OnSwipeRight;
-
     public System.Action OnSwipeUp;
     public System.Action OnSwipeDown;
 
@@ -22,23 +23,31 @@ public class Swipe : MonoBehaviour
             Touch touch = Input.GetTouch(0);
 
             if (touch.phase == TouchPhase.Began)
+            {
                 startPos = touch.position;
+                canSwipe = true;
+            }
 
-            if (touch.phase == TouchPhase.Ended)
+            if (touch.phase == TouchPhase.Ended && canSwipe)
             {
                 endPos = touch.position;
                 DetectSwipe();
+                canSwipe = false;
             }
         }
 
         // PC (para testear)
         if (Input.GetMouseButtonDown(0))
+        {
             startPos = Input.mousePosition;
+            canSwipe = true;
+        }
 
-        if (Input.GetMouseButtonUp(0))
+        if (Input.GetMouseButtonUp(0) && canSwipe)
         {
             endPos = Input.mousePosition;
             DetectSwipe();
+            canSwipe = false;
         }
     }
 
@@ -50,7 +59,6 @@ public class Swipe : MonoBehaviour
 
         if (Mathf.Abs(delta.x) > Mathf.Abs(delta.y))
         {
-            // Horizontal
             if (delta.x > 0)
                 OnSwipeRight?.Invoke();
             else
@@ -58,12 +66,10 @@ public class Swipe : MonoBehaviour
         }
         else
         {
-            // Vertical
             if (delta.y > 0)
                 OnSwipeUp?.Invoke();
             else
                 OnSwipeDown?.Invoke();
         }
     }
-
 }
