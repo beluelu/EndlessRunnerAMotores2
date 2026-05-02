@@ -1426,8 +1426,8 @@ MonoBehaviour:
   - {fileID: 168348364623840527}
   - {fileID: 3138249807810220943}
   - {fileID: 5456940492116982477}
-  speed: 0
-  coinPrefab: {fileID: 0}
+  speed: 5
+  coinPrefab: {fileID: 3218353757040011468, guid: 94aaeff8f66a2f04da49379a4733bba8, type: 3}
   coinLanes: []
 --- !u!114 &5382306094535430740
 MonoBehaviour:

@@ -12,22 +12,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 469c24fdb3bd6431b92cc1465bd9166b, type: 3}
   m_Name: RemoteConfigDataStoreAsset
   m_EditorClassIdentifier: 
-  _rsKeyList: "[\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"f6e38fa4-ca46-4ca9-a4af-debc4bd0b59c\"\r\n   
+  _rsKeyList: "[\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"68caedd4-d0f3-4af1-a4cb-27ea08f8a11c\"\r\n   
     },\r\n    \"rs\": {\r\n      \"key\": \"player_speed\",\r\n      \"type\": \"float\",\r\n     
-    \"value\": 7.0\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\":
-    \"d0b7dbe8-cc2e-4bd2-a962-1b5399d67e4b\"\r\n    },\r\n    \"rs\": {\r\n     
-    \"key\": \"jump_force\",\r\n      \"value\": 7.0,\r\n      \"type\": \"float\"\r\n   
-    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"d94c9012-f774-4dfd-a335-147b7bdede9b\"\r\n   
-    },\r\n    \"rs\": {\r\n      \"key\": \"gravity\",\r\n      \"value\": -25.0,\r\n     
-    \"type\": \"float\"\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\":
-    \"ed933dbc-cce0-46d4-8150-d56bedad6a0f\"\r\n    },\r\n    \"rs\": {\r\n     
-    \"key\": \"spawn_zombie\",\r\n      \"value\": true,\r\n      \"type\": \"bool\"\r\n   
-    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"fe5cb063-be15-4e35-b52c-b9dbd3a9d6e4\"\r\n   
-    },\r\n    \"rs\": {\r\n      \"key\": \"coins_amount\",\r\n      \"value\": 5,\r\n     
-    \"type\": \"int\"\r\n    }\r\n  }\r\n]"
-  _rsLastCachedKeyList: "[\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"f6e38fa4-ca46-4ca9-a4af-debc4bd0b59c\"\r\n   
+    \"value\": 4.0\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\":
+    \"036c0e70-8b07-43f4-868f-9aef7daf9bc4\"\r\n    },\r\n    \"rs\": {\r\n     
+    \"key\": \"jump_force\",\r\n      \"type\": \"float\",\r\n      \"value\": 7.0\r\n   
+    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"016103fd-674f-449d-9d68-178b319dff38\"\r\n   
+    },\r\n    \"rs\": {\r\n      \"key\": \"gravity\",\r\n      \"type\": \"float\",\r\n     
+    \"value\": -25.0\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\":
+    \"2099f91f-df5e-41ba-a6f8-c9752c72c9bd\"\r\n    },\r\n    \"rs\": {\r\n     
+    \"key\": \"spawn_zombie\",\r\n      \"type\": \"bool\",\r\n      \"value\": false\r\n   
+    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"f1b08efd-9542-4d1f-9ab2-3ec3a98ab340\"\r\n   
+    },\r\n    \"rs\": {\r\n      \"key\": \"coins_amount\",\r\n      \"type\": \"int\",\r\n     
+    \"value\": 7\r\n    }\r\n  }\r\n]"
+  _rsLastCachedKeyList: "[\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"68caedd4-d0f3-4af1-a4cb-27ea08f8a11c\"\r\n   
     },\r\n    \"rs\": {\r\n      \"key\": \"player_speed\",\r\n      \"type\": \"float\",\r\n     
-    \"value\": 7.0\r\n    }\r\n  }\r\n]"
+    \"value\": 4.0\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\":
+    \"036c0e70-8b07-43f4-868f-9aef7daf9bc4\"\r\n    },\r\n    \"rs\": {\r\n     
+    \"key\": \"jump_force\",\r\n      \"type\": \"float\",\r\n      \"value\": 7.0\r\n   
+    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"016103fd-674f-449d-9d68-178b319dff38\"\r\n   
+    },\r\n    \"rs\": {\r\n      \"key\": \"gravity\",\r\n      \"type\": \"float\",\r\n     
+    \"value\": -25.0\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\":
+    \"2099f91f-df5e-41ba-a6f8-c9752c72c9bd\"\r\n    },\r\n    \"rs\": {\r\n     
+    \"key\": \"spawn_zombie\",\r\n      \"type\": \"bool\",\r\n      \"value\": false\r\n   
+    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"f1b08efd-9542-4d1f-9ab2-3ec3a98ab340\"\r\n   
+    },\r\n    \"rs\": {\r\n      \"key\": \"coins_amount\",\r\n      \"type\": \"int\",\r\n     
+    \"value\": 7\r\n    }\r\n  }\r\n]"
   _environments: "[\r\n  {\r\n    \"projectId\": \"c768ae61-a5a4-401d-ac70-1c5c000b6476\",\r\n   
     \"name\": \"production\",\r\n    \"id\": \"32c8126b-334d-4a11-8de4-b7a982e160b7\",\r\n   
     \"isDefault\": true,\r\n    \"createdAt\": \"2026-04-08T14:55:01Z\",\r\n    \"updatedAt\":

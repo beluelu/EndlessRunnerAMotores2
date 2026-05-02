@@ -18,6 +18,12 @@ public class Section : MonoBehaviour
 
     private void Start()
     {
+        //remote config
+        if (RemoteConfigManager.Instance != null)
+        {
+            speed = RemoteConfigManager.Instance.playerSpeed;
+        }
+
         obstacles = new List<GameObject>();
 
         foreach (Transform child in transform)
@@ -52,7 +58,6 @@ public class Section : MonoBehaviour
         GameObject selected = obstacles[randomIndex];
         selected.SetActive(true);
 
-        
         SpawnCoins();
 
         Floor floorScript = selected.GetComponent<Floor>();
@@ -65,17 +70,23 @@ public class Section : MonoBehaviour
 
     void SpawnCoins()
     {
-        if (coinLanes.Length == 0)
-            return;
+        if (coinLanes.Length == 0) return;
 
         int randomLane = Random.Range(0, coinLanes.Length);
 
-        for (int i = 0; i < 5; i++)
+        int amount = 5;
+
+        //remote config
+        if (RemoteConfigManager.Instance != null)
+        {
+            amount = RemoteConfigManager.Instance.coinsAmount;
+        }
+
+        for (int i = 0; i < amount; i++)
         {
             Vector3 spawnPos = coinLanes[randomLane].position;
             spawnPos.z += i * 0.8f;
 
-            
             Collider[] hits = Physics.OverlapSphere(spawnPos, 1f);
 
             bool blocked = false;
@@ -123,7 +134,6 @@ public class Section : MonoBehaviour
         if (transform.position.z <= -20)
         {
             transform.Translate(Vector3.forward * 20 * 5);
-
             EnableRandomObstacle();
         }
     }

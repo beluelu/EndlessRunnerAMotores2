@@ -1,13 +1,21 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Coin : MonoBehaviour
 {
     public int value = 1;
-    public float rotationSpeed = 150f;
+
+    void Start()
+    {
+        
+        if (RemoteConfigManager.Instance != null)
+        {
+            value = RemoteConfigManager.Instance.coinsAmount;
+        }
+    }
 
     void Update()
     {
-        transform.Rotate(0, 0, 150f * Time.deltaTime);
+        transform.Rotate(0, 150f * Time.deltaTime, 0);
     }
 
     private void OnTriggerEnter(Collider other)

@@ -11,8 +11,8 @@ public class PlayerController : MonoBehaviour
     private bool isChangingLane = false;
 
     private float verticalVelocity = 0f;
-    public float jumpForce = 7f;
-    public float gravity = -20f;
+    public float jumpForce;
+    public float gravity;
 
     private bool isGrounded = true;
 
@@ -23,6 +23,14 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         playerAnim = GetComponent<PlayerAnimation>();
+
+        //remote config
+        if (RemoteConfigManager.Instance != null)
+        {
+            jumpForce = RemoteConfigManager.Instance.jumpForce;
+            gravity = RemoteConfigManager.Instance.gravity;
+        }
+
         Swipe swipe = FindObjectOfType<Swipe>();
 
         if (swipe != null)
@@ -42,7 +50,6 @@ public class PlayerController : MonoBehaviour
         if (playerAnim != null && playerAnim.isDead) return;
         if (playerAnim != null && playerAnim.isStumbling) return;
 
-       
         float targetX = 0;
 
         if (currentLane == 0) targetX = -laneDistance;
@@ -50,7 +57,6 @@ public class PlayerController : MonoBehaviour
 
         Vector3 targetPosition = new Vector3(targetX, transform.position.y, transform.position.z);
 
-       
         if (!isGrounded)
         {
             verticalVelocity += gravity * Time.deltaTime;
@@ -65,10 +71,8 @@ public class PlayerController : MonoBehaviour
             isGrounded = true;
         }
 
-       
         transform.position = Vector3.Lerp(transform.position, targetPosition, laneChangeSpeed * Time.deltaTime);
 
-        
         if (Mathf.Abs(transform.position.x - targetX) < 0.1f)
         {
             isChangingLane = false;
@@ -101,7 +105,6 @@ public class PlayerController : MonoBehaviour
     {
         if (isGrounded)
         {
-            Debug.Log("SALTO");
             verticalVelocity = jumpForce;
             isGrounded = false;
         }
@@ -131,7 +134,6 @@ public class PlayerController : MonoBehaviour
     void TriggerStumble()
     {
         if (playerAnim != null && playerAnim.isStumbling) return;
-
         playerAnim.Stumble();
     }
 }
