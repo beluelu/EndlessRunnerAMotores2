@@ -7,18 +7,22 @@ public class Section : MonoBehaviour
 {
     public List<GameObject> obstacles;
     public float speed;
-   
+
+    [Header("Coins")]
+    public GameObject coinPrefab;
+    public Transform[] coinLanes;
+
+    private List<GameObject> currentCoins = new List<GameObject>();
 
     private static int lastRandomIndex = -1;
 
     private void Start()
     {
-
-        
         obstacles = new List<GameObject>();
+
         foreach (Transform child in transform)
         {
-            if(child.tag == "Obstacle")
+            if (child.CompareTag("Obstacle"))
             {
                 obstacles.Add(child.gameObject);
             }
@@ -34,7 +38,10 @@ public class Section : MonoBehaviour
             obstacle.SetActive(false);
         }
 
+        ClearCoins();
+
         int randomIndex = lastRandomIndex;
+
         while (randomIndex == lastRandomIndex)
         {
             randomIndex = Random.Range(0, obstacles.Count);
@@ -46,14 +53,68 @@ public class Section : MonoBehaviour
         selected.SetActive(true);
 
         
+        SpawnCoins();
+
         Floor floorScript = selected.GetComponent<Floor>();
+
         if (floorScript != null)
         {
             floorScript.ActivateFloor();
         }
     }
 
-    
+    void SpawnCoins()
+    {
+        if (coinLanes.Length == 0)
+            return;
+
+        int randomLane = Random.Range(0, coinLanes.Length);
+
+        for (int i = 0; i < 5; i++)
+        {
+            Vector3 spawnPos = coinLanes[randomLane].position;
+            spawnPos.z += i * 0.8f;
+
+            
+            Collider[] hits = Physics.OverlapSphere(spawnPos, 1f);
+
+            bool blocked = false;
+
+            foreach (Collider hit in hits)
+            {
+                if (hit.CompareTag("Obstacle"))
+                {
+                    blocked = true;
+                    break;
+                }
+            }
+
+            if (!blocked)
+            {
+                GameObject coin = Instantiate(
+                    coinPrefab,
+                    spawnPos,
+                    coinPrefab.transform.rotation,
+                    transform
+                );
+
+                currentCoins.Add(coin);
+            }
+        }
+    }
+
+    void ClearCoins()
+    {
+        foreach (GameObject coin in currentCoins)
+        {
+            if (coin != null)
+            {
+                Destroy(coin);
+            }
+        }
+
+        currentCoins.Clear();
+    }
 
     void Update()
     {
@@ -66,5 +127,4 @@ public class Section : MonoBehaviour
             EnableRandomObstacle();
         }
     }
-
 }

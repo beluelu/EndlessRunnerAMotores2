@@ -377,6 +377,26 @@ PrefabInstance:
       propertyPath: speed
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 1018152607979807522, guid: a8d82da6d89981c409ff7ed802e633ab, type: 3}
+      propertyPath: coinPrefab
+      value: 
+      objectReference: {fileID: 3218353757040011468, guid: 94aaeff8f66a2f04da49379a4733bba8, type: 3}
+    - target: {fileID: 1018152607979807522, guid: a8d82da6d89981c409ff7ed802e633ab, type: 3}
+      propertyPath: coinLanes.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1018152607979807522, guid: a8d82da6d89981c409ff7ed802e633ab, type: 3}
+      propertyPath: 'coinLanes.Array.data[0]'
+      value: 
+      objectReference: {fileID: 450642111}
+    - target: {fileID: 1018152607979807522, guid: a8d82da6d89981c409ff7ed802e633ab, type: 3}
+      propertyPath: 'coinLanes.Array.data[1]'
+      value: 
+      objectReference: {fileID: 161898225}
+    - target: {fileID: 1018152607979807522, guid: a8d82da6d89981c409ff7ed802e633ab, type: 3}
+      propertyPath: 'coinLanes.Array.data[2]'
+      value: 
+      objectReference: {fileID: 1539046218}
     - target: {fileID: 5825774260657619388, guid: a8d82da6d89981c409ff7ed802e633ab, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -428,9 +448,80 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 131244459955285061, guid: a8d82da6d89981c409ff7ed802e633ab, type: 3}
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 5825774260657619388, guid: a8d82da6d89981c409ff7ed802e633ab, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 450642111}
+    - targetCorrespondingSourceObject: {fileID: 5825774260657619388, guid: a8d82da6d89981c409ff7ed802e633ab, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 161898225}
+    - targetCorrespondingSourceObject: {fileID: 5825774260657619388, guid: a8d82da6d89981c409ff7ed802e633ab, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1539046218}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a8d82da6d89981c409ff7ed802e633ab, type: 3}
+--- !u!1 &133057181
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 133057182}
+  m_Layer: 0
+  m_Name: CoinLaneCenter
+  m_TagString: Untagged
+  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &133057182
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 133057181}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.041, y: 0.66, z: -0.42000002}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1093105800}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &161898224
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 161898225}
+  m_Layer: 0
+  m_Name: CoinLaneCenter (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &161898225
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 161898224}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.041, y: 0.66, z: 0.069999695}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 881876272}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &283201541
 GameObject:
   m_ObjectHideFlags: 0
@@ -856,6 +947,68 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &414637619
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 414637620}
+  m_Layer: 0
+  m_Name: CoinLaneLeft (4)
+  m_TagString: Untagged
+  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &414637620
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 414637619}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.36, y: 0.66, z: 0.12}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1903042918}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &438755215
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 438755216}
+  m_Layer: 0
+  m_Name: CoinLaneCenter (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &438755216
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 438755215}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.041, y: 0.66, z: 0.060001373}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 610644684}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &439338835
 GameObject:
   m_ObjectHideFlags: 0
@@ -892,6 +1045,37 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &450642110
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 450642111}
+  m_Layer: 0
+  m_Name: CoinLaneLeft (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &450642111
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 450642110}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.36, y: 0.66, z: 0.07}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 881876272}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &539216728
 GameObject:
   m_ObjectHideFlags: 0
@@ -979,6 +1163,26 @@ PrefabInstance:
       propertyPath: speed
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 1018152607979807522, guid: a8d82da6d89981c409ff7ed802e633ab, type: 3}
+      propertyPath: coinPrefab
+      value: 
+      objectReference: {fileID: 3218353757040011468, guid: 94aaeff8f66a2f04da49379a4733bba8, type: 3}
+    - target: {fileID: 1018152607979807522, guid: a8d82da6d89981c409ff7ed802e633ab, type: 3}
+      propertyPath: coinLanes.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1018152607979807522, guid: a8d82da6d89981c409ff7ed802e633ab, type: 3}
+      propertyPath: 'coinLanes.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1364973012}
+    - target: {fileID: 1018152607979807522, guid: a8d82da6d89981c409ff7ed802e633ab, type: 3}
+      propertyPath: 'coinLanes.Array.data[1]'
+      value: 
+      objectReference: {fileID: 438755216}
+    - target: {fileID: 1018152607979807522, guid: a8d82da6d89981c409ff7ed802e633ab, type: 3}
+      propertyPath: 'coinLanes.Array.data[2]'
+      value: 
+      objectReference: {fileID: 1124063168}
     - target: {fileID: 5825774260657619388, guid: a8d82da6d89981c409ff7ed802e633ab, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1030,9 +1234,85 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 131244459955285061, guid: a8d82da6d89981c409ff7ed802e633ab, type: 3}
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 5825774260657619388, guid: a8d82da6d89981c409ff7ed802e633ab, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1364973012}
+    - targetCorrespondingSourceObject: {fileID: 5825774260657619388, guid: a8d82da6d89981c409ff7ed802e633ab, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 438755216}
+    - targetCorrespondingSourceObject: {fileID: 5825774260657619388, guid: a8d82da6d89981c409ff7ed802e633ab, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1124063168}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a8d82da6d89981c409ff7ed802e633ab, type: 3}
+--- !u!4 &610644684 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5825774260657619388, guid: a8d82da6d89981c409ff7ed802e633ab, type: 3}
+  m_PrefabInstance: {fileID: 567623933}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &632691341
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 632691342}
+  m_Layer: 0
+  m_Name: CoinLaneLeft (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &632691342
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 632691341}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.36, y: 0.66, z: 0.08}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1675344837}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &654856751
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 654856752}
+  m_Layer: 0
+  m_Name: CoinLaneRight (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &654856752
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 654856751}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.329, y: 0.66, z: 0.07999992}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1675344837}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &657167515
 GameObject:
   m_ObjectHideFlags: 0
@@ -1069,6 +1349,37 @@ RectTransform:
   m_AnchoredPosition: {x: -5, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &739589000
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 739589001}
+  m_Layer: 0
+  m_Name: CoinLaneRight
+  m_TagString: Untagged
+  m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &739589001
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 739589000}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.329, y: 0.66, z: -0.42000002}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1093105800}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &758039608
 GameObject:
   m_ObjectHideFlags: 0
@@ -1382,6 +1693,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 873627520}
   m_CullTransparentMesh: 1
+--- !u!4 &881876272 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5825774260657619388, guid: a8d82da6d89981c409ff7ed802e633ab, type: 3}
+  m_PrefabInstance: {fileID: 120354851}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &969197809
 GameObject:
   m_ObjectHideFlags: 0
@@ -1595,6 +1911,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1045770425}
   m_CullTransparentMesh: 1
+--- !u!1 &1069397785
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1069397786}
+  m_Layer: 0
+  m_Name: CoinLaneCenter (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1069397786
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1069397785}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.041, y: 0.66, z: 0.07999992}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1675344837}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1079461005
 GameObject:
   m_ObjectHideFlags: 0
@@ -1672,9 +2019,29 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1018152607979807522, guid: a8d82da6d89981c409ff7ed802e633ab, type: 3}
+      propertyPath: coinPrefab
+      value: 
+      objectReference: {fileID: 3218353757040011468, guid: 94aaeff8f66a2f04da49379a4733bba8, type: 3}
+    - target: {fileID: 1018152607979807522, guid: a8d82da6d89981c409ff7ed802e633ab, type: 3}
       propertyPath: zombiePrefab
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 1018152607979807522, guid: a8d82da6d89981c409ff7ed802e633ab, type: 3}
+      propertyPath: coinLanes.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1018152607979807522, guid: a8d82da6d89981c409ff7ed802e633ab, type: 3}
+      propertyPath: 'coinLanes.Array.data[0]'
+      value: 
+      objectReference: {fileID: 632691342}
+    - target: {fileID: 1018152607979807522, guid: a8d82da6d89981c409ff7ed802e633ab, type: 3}
+      propertyPath: 'coinLanes.Array.data[1]'
+      value: 
+      objectReference: {fileID: 1069397786}
+    - target: {fileID: 1018152607979807522, guid: a8d82da6d89981c409ff7ed802e633ab, type: 3}
+      propertyPath: 'coinLanes.Array.data[2]'
+      value: 
+      objectReference: {fileID: 654856752}
     - target: {fileID: 5825774260657619388, guid: a8d82da6d89981c409ff7ed802e633ab, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1726,9 +2093,23 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 131244459955285061, guid: a8d82da6d89981c409ff7ed802e633ab, type: 3}
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 5825774260657619388, guid: a8d82da6d89981c409ff7ed802e633ab, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 632691342}
+    - targetCorrespondingSourceObject: {fileID: 5825774260657619388, guid: a8d82da6d89981c409ff7ed802e633ab, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1069397786}
+    - targetCorrespondingSourceObject: {fileID: 5825774260657619388, guid: a8d82da6d89981c409ff7ed802e633ab, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 654856752}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a8d82da6d89981c409ff7ed802e633ab, type: 3}
+--- !u!4 &1093105800 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5825774260657619388, guid: a8d82da6d89981c409ff7ed802e633ab, type: 3}
+  m_PrefabInstance: {fileID: 4119146052304743505}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1093194978
 GameObject:
   m_ObjectHideFlags: 0
@@ -1937,6 +2318,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1104492552}
   m_CullTransparentMesh: 1
+--- !u!1 &1124063167
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1124063168}
+  m_Layer: 0
+  m_Name: CoinLaneRight (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1124063168
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1124063167}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.329, y: 0.66, z: 0.060001373}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 610644684}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1134366308
 GameObject:
   m_ObjectHideFlags: 0
@@ -2163,6 +2575,37 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!1 &1164397524
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1164397525}
+  m_Layer: 0
+  m_Name: CoinLaneRight (4)
+  m_TagString: Untagged
+  m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1164397525
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1164397524}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.329, y: 0.66, z: 0.12000275}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1903042918}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1173501682
 GameObject:
   m_ObjectHideFlags: 0
@@ -2308,6 +2751,26 @@ PrefabInstance:
       propertyPath: speed
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 1018152607979807522, guid: a8d82da6d89981c409ff7ed802e633ab, type: 3}
+      propertyPath: coinPrefab
+      value: 
+      objectReference: {fileID: 3218353757040011468, guid: 94aaeff8f66a2f04da49379a4733bba8, type: 3}
+    - target: {fileID: 1018152607979807522, guid: a8d82da6d89981c409ff7ed802e633ab, type: 3}
+      propertyPath: coinLanes.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1018152607979807522, guid: a8d82da6d89981c409ff7ed802e633ab, type: 3}
+      propertyPath: 'coinLanes.Array.data[0]'
+      value: 
+      objectReference: {fileID: 414637620}
+    - target: {fileID: 1018152607979807522, guid: a8d82da6d89981c409ff7ed802e633ab, type: 3}
+      propertyPath: 'coinLanes.Array.data[1]'
+      value: 
+      objectReference: {fileID: 1618774590}
+    - target: {fileID: 1018152607979807522, guid: a8d82da6d89981c409ff7ed802e633ab, type: 3}
+      propertyPath: 'coinLanes.Array.data[2]'
+      value: 
+      objectReference: {fileID: 1164397525}
     - target: {fileID: 5825774260657619388, guid: a8d82da6d89981c409ff7ed802e633ab, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -2359,7 +2822,16 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 131244459955285061, guid: a8d82da6d89981c409ff7ed802e633ab, type: 3}
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 5825774260657619388, guid: a8d82da6d89981c409ff7ed802e633ab, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 414637620}
+    - targetCorrespondingSourceObject: {fileID: 5825774260657619388, guid: a8d82da6d89981c409ff7ed802e633ab, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1618774590}
+    - targetCorrespondingSourceObject: {fileID: 5825774260657619388, guid: a8d82da6d89981c409ff7ed802e633ab, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1164397525}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a8d82da6d89981c409ff7ed802e633ab, type: 3}
 --- !u!1 &1317061751
@@ -2441,6 +2913,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1317061751}
   m_CullTransparentMesh: 1
+--- !u!1 &1364973011
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1364973012}
+  m_Layer: 0
+  m_Name: CoinLaneLeft (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1364973012
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1364973011}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.36, y: 0.66, z: 0.06}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 610644684}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1528495834
 GameObject:
   m_ObjectHideFlags: 0
@@ -2508,6 +3011,37 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1539046217
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1539046218}
+  m_Layer: 0
+  m_Name: CoinLaneRight (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1539046218
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1539046217}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.329, y: 0.66, z: 0.069999695}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 881876272}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1576180916
 GameObject:
@@ -2784,6 +3318,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Aj
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c2f88f8ea8a100044b8b31fb1df3e7ca, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 5866666021909216657, guid: c2f88f8ea8a100044b8b31fb1df3e7ca, type: 3}
       propertyPath: m_Controller
       value: 
@@ -2809,6 +3347,37 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 2098314571}
   m_SourcePrefab: {fileID: 100100000, guid: c2f88f8ea8a100044b8b31fb1df3e7ca, type: 3}
+--- !u!1 &1618774589
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1618774590}
+  m_Layer: 0
+  m_Name: CoinLaneCenter (4)
+  m_TagString: Untagged
+  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1618774590
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1618774589}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.041, y: 0.66, z: 0.12000275}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1903042918}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1667273515
 GameObject:
   m_ObjectHideFlags: 0
@@ -2947,6 +3516,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1667273515}
   m_CullTransparentMesh: 1
+--- !u!4 &1675344837 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5825774260657619388, guid: a8d82da6d89981c409ff7ed802e633ab, type: 3}
+  m_PrefabInstance: {fileID: 1089692115}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1676566339
 GameObject:
   m_ObjectHideFlags: 0
@@ -3219,6 +3793,42 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1760184612}
   m_CullTransparentMesh: 1
+--- !u!1 &1807067430
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1807067431}
+  m_Layer: 0
+  m_Name: CoinLaneLeft
+  m_TagString: Untagged
+  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1807067431
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1807067430}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.36, y: 0.66, z: -0.42}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1093105800}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1903042918 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5825774260657619388, guid: a8d82da6d89981c409ff7ed802e633ab, type: 3}
+  m_PrefabInstance: {fileID: 1223838051}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1948203848
 GameObject:
   m_ObjectHideFlags: 0
@@ -3703,8 +4313,32 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1018152607979807522, guid: a8d82da6d89981c409ff7ed802e633ab, type: 3}
+      propertyPath: coinPrefab
+      value: 
+      objectReference: {fileID: 3218353757040011468, guid: 94aaeff8f66a2f04da49379a4733bba8, type: 3}
+    - target: {fileID: 1018152607979807522, guid: a8d82da6d89981c409ff7ed802e633ab, type: 3}
       propertyPath: sectionSize
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1018152607979807522, guid: a8d82da6d89981c409ff7ed802e633ab, type: 3}
+      propertyPath: coinLanes.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1018152607979807522, guid: a8d82da6d89981c409ff7ed802e633ab, type: 3}
+      propertyPath: 'coinLanes.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1807067431}
+    - target: {fileID: 1018152607979807522, guid: a8d82da6d89981c409ff7ed802e633ab, type: 3}
+      propertyPath: 'coinLanes.Array.data[1]'
+      value: 
+      objectReference: {fileID: 133057182}
+    - target: {fileID: 1018152607979807522, guid: a8d82da6d89981c409ff7ed802e633ab, type: 3}
+      propertyPath: 'coinLanes.Array.data[2]'
+      value: 
+      objectReference: {fileID: 739589001}
+    - target: {fileID: 1395892745710618985, guid: a8d82da6d89981c409ff7ed802e633ab, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2571774024119041738, guid: a8d82da6d89981c409ff7ed802e633ab, type: 3}
       propertyPath: m_IsActive
@@ -3769,7 +4403,16 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 131244459955285061, guid: a8d82da6d89981c409ff7ed802e633ab, type: 3}
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 5825774260657619388, guid: a8d82da6d89981c409ff7ed802e633ab, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1807067431}
+    - targetCorrespondingSourceObject: {fileID: 5825774260657619388, guid: a8d82da6d89981c409ff7ed802e633ab, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 133057182}
+    - targetCorrespondingSourceObject: {fileID: 5825774260657619388, guid: a8d82da6d89981c409ff7ed802e633ab, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 739589001}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a8d82da6d89981c409ff7ed802e633ab, type: 3}
 --- !u!1660057539 &9223372036854775807

@@ -8,6 +8,7 @@ TagManager:
   - Section
   - SmallObstacle
   - BigObstacle
+  - Coin
   layers:
   - Default
   - TransparentFX
