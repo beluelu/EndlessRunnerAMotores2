@@ -4,15 +4,6 @@ public class Coin : MonoBehaviour
 {
     public int value = 1;
 
-    void Start()
-    {
-        
-        if (RemoteConfigManager.Instance != null)
-        {
-            value = RemoteConfigManager.Instance.coinsAmount;
-        }
-    }
-
     void Update()
     {
         transform.Rotate(0, 150f * Time.deltaTime, 0);
@@ -23,6 +14,9 @@ public class Coin : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             Debug.Log("Moneda +" + value);
+
+            GameManager.instance.AddCoins(value);
+
             Destroy(gameObject);
         }
     }

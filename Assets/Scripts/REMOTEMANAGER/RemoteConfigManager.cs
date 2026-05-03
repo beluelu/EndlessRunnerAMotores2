@@ -44,7 +44,7 @@ public class RemoteConfigManager : MonoBehaviour
         jumpForce = RemoteConfigService.Instance.appConfig.GetFloat("jump_force", 7f);
         gravity = RemoteConfigService.Instance.appConfig.GetFloat("gravity", -20f);
         spawnZombie = RemoteConfigService.Instance.appConfig.GetBool("spawn_zombie", true);
-        coinsAmount = RemoteConfigService.Instance.appConfig.GetInt("coins_amount", 5);
+        coinsAmount = RemoteConfigService.Instance.appConfig.GetInt("coins_amount", 1);
 
         Debug.Log("REMOTE CONFIG APLICADO");
     }
