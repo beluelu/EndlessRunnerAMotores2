@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         instance = this;
+        Time.timeScale = 1f; // 🔥 FIX
     }
 
     public void AddCoins(int amount)
