@@ -14,7 +14,7 @@ public class PlayerController : MonoBehaviour
     public float jumpForce;
     public float gravity;
 
-    private bool isGrounded = true;
+    public bool isGrounded = true;
 
     private PlayerAnimation playerAnim;
 
@@ -132,20 +132,22 @@ public class PlayerController : MonoBehaviour
         // SMALL OBSTACLE
         if (((1 << otherLayer) & smallObstacleLayer) != 0)
         {
-            if (stats != null)
-                stats.TakeDamage(1);
+            // 🔥 SOLO si está en el piso
+            if (isGrounded)
+            {
+                if (stats != null)
+                    stats.TakeDamage(1);
 
-            TriggerStumble(); // solo animación, NO muerte
+                TriggerStumble();
+            }
         }
 
         // BIG OBSTACLE
         else if (((1 << otherLayer) & bigObstacleLayer) != 0)
         {
             if (stats != null)
-                stats.TakeDamage(999); // PlayerStats decide morir
+                stats.TakeDamage(999);
         }
-
-        Debug.Log("Colision con: " + LayerMask.LayerToName(otherLayer));
     }
 
     void TriggerStumble()
