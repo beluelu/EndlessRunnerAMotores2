@@ -14,7 +14,7 @@ public class Floor : MonoBehaviour
 
         bool canSpawn = true;
 
-        //remote config
+        
         if (RemoteConfigManager.Instance != null)
         {
             canSpawn = RemoteConfigManager.Instance.spawnZombie;

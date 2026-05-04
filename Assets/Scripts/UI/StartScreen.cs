@@ -13,7 +13,7 @@ public class StartScreen : MonoBehaviour
 
     public void QuitGame()
     {
-        //Application.Quit();
+        
         Debug.Log("Quitted");
     }
 }
