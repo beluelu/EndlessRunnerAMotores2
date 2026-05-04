@@ -53,8 +53,12 @@ PrefabInstance:
       value: stump_011
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 501dc5288e56fe9448d5f4d4025cee04, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 501dc5288e56fe9448d5f4d4025cee04, type: 3}
       propertyPath: m_TagString
-      value: SmallObstacle
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -88,5 +92,5 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 3.2176363, y: 0.7788534, z: 2.1057577}
-  m_Center: {x: -0.3516754, y: 0.383008, z: 0.9616948}
+  m_Size: {x: 3.2176363, y: 1.8894938, z: 2.1057575}
+  m_Center: {x: -0.35167533, y: 0.9383282, z: 0.96169466}

@@ -6,8 +6,6 @@ TagManager:
   tags:
   - Obstacle
   - Section
-  - SmallObstacle
-  - BigObstacle
   - Coin
   layers:
   - Default
@@ -16,9 +14,9 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
+  - SmallObstacle
+  - BigObstacle
+  - PowerUp
   - 
   - 
   - 

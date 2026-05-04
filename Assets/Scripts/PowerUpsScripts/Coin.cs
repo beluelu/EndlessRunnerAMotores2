@@ -13,9 +13,14 @@ public class Coin : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            Debug.Log("Moneda +" + value);
+            PlayerStats stats = other.GetComponent<PlayerStats>();
 
-            GameManager.instance.AddCoins(value);
+            int multiplier = 1;
+
+            if (stats != null)
+                multiplier = stats.coinMultiplier;
+
+            Debug.Log("Moneda +" + (value * multiplier));
 
             Destroy(gameObject);
         }

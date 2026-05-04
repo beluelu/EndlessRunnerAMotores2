@@ -20,11 +20,16 @@ public class PlayerController : MonoBehaviour
 
     public static Action IsGameOver;
 
+    // 🔥 NUEVO: Layers
+    [Header("Collision Layers")]
+    public LayerMask smallObstacleLayer;
+    public LayerMask bigObstacleLayer;
+
     void Start()
     {
         playerAnim = GetComponent<PlayerAnimation>();
 
-        //remote config
+        // remote config
         if (RemoteConfigManager.Instance != null)
         {
             jumpForce = RemoteConfigManager.Instance.jumpForce;
@@ -120,15 +125,27 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("SmallObstacle"))
+        PlayerStats stats = GetComponent<PlayerStats>();
+
+        int otherLayer = other.gameObject.layer;
+
+        // SMALL OBSTACLE
+        if (((1 << otherLayer) & smallObstacleLayer) != 0)
         {
-            TriggerStumble();
+            if (stats != null)
+                stats.TakeDamage(1);
+
+            TriggerStumble(); // solo animación, NO muerte
         }
 
-        if (other.CompareTag("BigObstacle"))
+        // BIG OBSTACLE
+        else if (((1 << otherLayer) & bigObstacleLayer) != 0)
         {
-            TriggerFall();
+            if (stats != null)
+                stats.TakeDamage(999); // PlayerStats decide morir
         }
+
+        Debug.Log("Colision con: " + LayerMask.LayerToName(otherLayer));
     }
 
     void TriggerStumble()

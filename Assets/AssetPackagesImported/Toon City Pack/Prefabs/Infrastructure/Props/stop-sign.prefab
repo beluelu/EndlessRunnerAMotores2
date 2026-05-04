@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 8143998215607898418}
   - component: {fileID: 6260492161790879224}
   - component: {fileID: 6473276754785702966}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: stop-sign
-  m_TagString: BigObstacle
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

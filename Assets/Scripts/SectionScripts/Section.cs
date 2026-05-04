@@ -16,6 +16,9 @@ public class Section : MonoBehaviour
 
     private static int lastRandomIndex = -1;
 
+    [Header("PowerUps")]
+    public GameObject[] powerUpPrefabs;
+
     private void Start()
     {
         //remote config
@@ -65,6 +68,21 @@ public class Section : MonoBehaviour
         if (floorScript != null)
         {
             floorScript.ActivateFloor();
+        }
+        SpawnPowerUp();
+    }
+
+    void SpawnPowerUp()
+    {
+        if (powerUpPrefabs.Length == 0) return;
+
+        if (Random.value < 0.3f) // probabilidad
+        {
+            int randomIndex = Random.Range(0, powerUpPrefabs.Length);
+
+            Vector3 spawnPos = transform.position + new Vector3(0, 1, 5);
+
+            Instantiate(powerUpPrefabs[randomIndex], spawnPos, Quaternion.identity);
         }
     }
 

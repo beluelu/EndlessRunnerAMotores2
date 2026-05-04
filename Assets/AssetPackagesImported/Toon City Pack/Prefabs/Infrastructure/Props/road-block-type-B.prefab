@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 7085168231060406162}
   - component: {fileID: 5023595777284115288}
   - component: {fileID: 385943705785210567}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: road-block-type-B
-  m_TagString: BigObstacle
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -106,5 +106,5 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.7181501, y: 0.31705818, z: 0.3086834}
-  m_Center: {x: -0.041944504, y: 0.90190893, z: -0.06981182}
+  m_Size: {x: 1.7181501, y: 0.4009389, z: 0.3086834}
+  m_Center: {x: -0.041944504, y: 0.85996884, z: -0.06981182}

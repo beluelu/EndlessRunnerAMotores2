@@ -12,30 +12,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 469c24fdb3bd6431b92cc1465bd9166b, type: 3}
   m_Name: RemoteConfigDataStoreAsset
   m_EditorClassIdentifier: 
-  _rsKeyList: "[\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"38c4430a-0f1c-4548-9db2-3c436408fb42\"\r\n   
+  _rsKeyList: "[\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"b689f156-8d52-462a-b3f0-bcb98dcd42f0\"\r\n   
     },\r\n    \"rs\": {\r\n      \"key\": \"player_speed\",\r\n      \"type\": \"float\",\r\n     
-    \"value\": 4.0\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\":
-    \"472148ee-32e7-41e9-94a1-2c6c6bd54c3b\"\r\n    },\r\n    \"rs\": {\r\n     
+    \"value\": 2.0\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\":
+    \"2f94c50f-3711-46c7-80f1-1b1a31d5b9f8\"\r\n    },\r\n    \"rs\": {\r\n     
     \"key\": \"jump_force\",\r\n      \"type\": \"float\",\r\n      \"value\": 7.0\r\n   
-    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"df0c4a0d-165a-4f67-9a91-9e89792c76e0\"\r\n   
+    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"fd65002d-379f-4059-878d-c1afd40cffe8\"\r\n   
     },\r\n    \"rs\": {\r\n      \"key\": \"gravity\",\r\n      \"type\": \"float\",\r\n     
     \"value\": -25.0\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\":
-    \"e14d249f-b101-458d-bbb8-7f1cba69422c\"\r\n    },\r\n    \"rs\": {\r\n     
+    \"fd02c8be-e49a-41e1-b230-7a865b43032f\"\r\n    },\r\n    \"rs\": {\r\n     
     \"key\": \"spawn_zombie\",\r\n      \"type\": \"bool\",\r\n      \"value\": true\r\n   
-    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"38b8ba24-b71f-4813-a292-d7e565335a15\"\r\n   
+    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"4082c169-c713-4cce-8202-74a7ca5a10c7\"\r\n   
     },\r\n    \"rs\": {\r\n      \"key\": \"coins_amount\",\r\n      \"type\": \"int\",\r\n     
     \"value\": 7\r\n    }\r\n  }\r\n]"
-  _rsLastCachedKeyList: "[\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"38c4430a-0f1c-4548-9db2-3c436408fb42\"\r\n   
+  _rsLastCachedKeyList: "[\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"b689f156-8d52-462a-b3f0-bcb98dcd42f0\"\r\n   
     },\r\n    \"rs\": {\r\n      \"key\": \"player_speed\",\r\n      \"type\": \"float\",\r\n     
-    \"value\": 4.0\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\":
-    \"472148ee-32e7-41e9-94a1-2c6c6bd54c3b\"\r\n    },\r\n    \"rs\": {\r\n     
+    \"value\": 2.0\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\":
+    \"2f94c50f-3711-46c7-80f1-1b1a31d5b9f8\"\r\n    },\r\n    \"rs\": {\r\n     
     \"key\": \"jump_force\",\r\n      \"type\": \"float\",\r\n      \"value\": 7.0\r\n   
-    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"df0c4a0d-165a-4f67-9a91-9e89792c76e0\"\r\n   
+    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"fd65002d-379f-4059-878d-c1afd40cffe8\"\r\n   
     },\r\n    \"rs\": {\r\n      \"key\": \"gravity\",\r\n      \"type\": \"float\",\r\n     
     \"value\": -25.0\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\":
-    \"e14d249f-b101-458d-bbb8-7f1cba69422c\"\r\n    },\r\n    \"rs\": {\r\n     
+    \"fd02c8be-e49a-41e1-b230-7a865b43032f\"\r\n    },\r\n    \"rs\": {\r\n     
     \"key\": \"spawn_zombie\",\r\n      \"type\": \"bool\",\r\n      \"value\": true\r\n   
-    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"38b8ba24-b71f-4813-a292-d7e565335a15\"\r\n   
+    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"4082c169-c713-4cce-8202-74a7ca5a10c7\"\r\n   
     },\r\n    \"rs\": {\r\n      \"key\": \"coins_amount\",\r\n      \"type\": \"int\",\r\n     
     \"value\": 7\r\n    }\r\n  }\r\n]"
   _environments: "[\r\n  {\r\n    \"projectId\": \"c768ae61-a5a4-401d-ac70-1c5c000b6476\",\r\n   
