@@ -33,7 +33,7 @@ public class PlayerController : MonoBehaviour
     {
         playerAnim = GetComponent<PlayerAnimation>();
 
-        // remote config
+        
         if (RemoteConfigManager.Instance != null)
         {
             jumpForce = RemoteConfigManager.Instance.jumpForce;
@@ -150,10 +150,10 @@ public class PlayerController : MonoBehaviour
 
         int otherLayer = other.gameObject.layer;
 
-        // SMALL OBSTACLE
+        
         if (((1 << otherLayer) & smallObstacleLayer) != 0)
         {
-            // 🔥 SOLO si está en el piso
+            
             if (isGrounded)
             {
                 if (stats != null)
@@ -163,10 +163,10 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        // BIG OBSTACLE
+        
         else if (((1 << otherLayer) & bigObstacleLayer) != 0)
         {
-            // 🔥 SOLO muere si NO está rodando
+            
             if (!playerAnim.isRolling)
             {
                 if (stats != null)

@@ -21,7 +21,7 @@ public class Section : MonoBehaviour
 
     private void Start()
     {
-        //remote config
+        
         if (RemoteConfigManager.Instance != null)
         {
             speed = RemoteConfigManager.Instance.playerSpeed;
@@ -69,20 +69,27 @@ public class Section : MonoBehaviour
         {
             floorScript.ActivateFloor();
         }
-        SpawnPowerUp();
+        //SpawnPowerUp();
     }
 
     void SpawnPowerUp()
     {
-        if (powerUpPrefabs.Length == 0) return;
+        if (powerUpPrefabs.Length == 0 || coinLanes.Length == 0) return;
 
-        if (Random.value < 0.3f) // probabilidad
+        if (Random.value < 0.3f)
         {
-            int randomIndex = Random.Range(0, powerUpPrefabs.Length);
+            int randomPower = Random.Range(0, powerUpPrefabs.Length);
+            int randomLane = Random.Range(0, coinLanes.Length);
 
-            Vector3 spawnPos = transform.position + new Vector3(0, 1, 5);
+            Vector3 spawnPos = coinLanes[randomLane].position;
+            spawnPos.y += 1f;
 
-            Instantiate(powerUpPrefabs[randomIndex], spawnPos, Quaternion.identity);
+            Instantiate(
+                powerUpPrefabs[randomPower],
+                spawnPos,
+                Quaternion.identity,
+                transform
+            );
         }
     }
 
@@ -99,7 +106,7 @@ public class Section : MonoBehaviour
             amount = RemoteConfigManager.Instance.coinsAmount;
         }
 
-        // 🔥 multiplicador
+        
         PlayerStats playerStats = FindObjectOfType <PlayerStats>();
 
         if (playerStats != null)
@@ -149,7 +156,7 @@ public class Section : MonoBehaviour
 
             Vector3 newPos = coin.transform.position;
 
-            // 👉 pequeño offset para que no se superpongan exacto
+            
             newPos.x += 0.5f;
 
             GameObject newCoin = Instantiate(
