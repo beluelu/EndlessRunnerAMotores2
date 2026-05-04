@@ -17,10 +17,15 @@ public class Coin : MonoBehaviour
 
             if (stats != null)
             {
-                int multiplier = stats.coinMultiplier;
-                int total = value * multiplier;
+                int total = value * stats.coinMultiplier;
 
                 stats.AddCoins(total);
+
+                // 🔥 avisar al GameManager
+                if (GameManager.instance != null)
+                {
+                    GameManager.instance.AddCoins(total);
+                }
             }
             Destroy(gameObject);
         }

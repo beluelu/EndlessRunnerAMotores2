@@ -4,7 +4,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
     public int currentCoins = 0;
-    public int coinsToWin = 30;
+    public int coinsToWin = 20;
 
     public GameObject victoryPanel;
 
