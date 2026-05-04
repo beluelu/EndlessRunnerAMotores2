@@ -15,13 +15,13 @@ public class Coin : MonoBehaviour
         {
             PlayerStats stats = other.GetComponent<PlayerStats>();
 
-            int multiplier = 1;
-
             if (stats != null)
-                multiplier = stats.coinMultiplier;
+            {
+                int multiplier = stats.coinMultiplier;
+                int total = value * multiplier;
 
-            Debug.Log("Moneda +" + (value * multiplier));
-
+                stats.AddCoins(total);
+            }
             Destroy(gameObject);
         }
     }

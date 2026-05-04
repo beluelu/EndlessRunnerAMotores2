@@ -15,6 +15,9 @@ public class PlayerStats : MonoBehaviour
     // 🔥 referencia UI
     public UIHearts uiHearts;
 
+    public int coins = 0;
+    public UICoins uiCoins;
+
     void Start()
     {
         currentLives = maxLives;
@@ -22,6 +25,9 @@ public class PlayerStats : MonoBehaviour
 
         if (uiHearts != null)
             uiHearts.UpdateHearts(currentLives);
+
+        if (uiCoins != null)
+            uiCoins.UpdateCoins(coins);
     }
 
     public void TakeDamage(int amount)
@@ -89,5 +95,13 @@ public class PlayerStats : MonoBehaviour
         coinMultiplier = 2;
         yield return new WaitForSeconds(duration);
         coinMultiplier = 1;
+    }
+
+    public void AddCoins(int amount)
+    {
+        coins += amount;
+
+        if (uiCoins != null)
+            uiCoins.UpdateCoins(coins);
     }
 }
