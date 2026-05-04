@@ -12,30 +12,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 469c24fdb3bd6431b92cc1465bd9166b, type: 3}
   m_Name: RemoteConfigDataStoreAsset
   m_EditorClassIdentifier: 
-  _rsKeyList: "[\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"529e4b27-b944-42c5-b1e2-f18ae2cdc870\"\r\n   
+  _rsKeyList: "[\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"6dc05fb0-9f07-402e-990a-88576a4df670\"\r\n   
     },\r\n    \"rs\": {\r\n      \"key\": \"player_speed\",\r\n      \"type\": \"float\",\r\n     
     \"value\": 2.0\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\":
-    \"ce7cfabd-3057-459c-9440-68b3c9a96681\"\r\n    },\r\n    \"rs\": {\r\n     
+    \"42cc4357-e923-41f2-b6f9-ea5b2240cede\"\r\n    },\r\n    \"rs\": {\r\n     
     \"key\": \"jump_force\",\r\n      \"type\": \"float\",\r\n      \"value\": 7.0\r\n   
-    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"736fee40-cc93-403a-b786-797e9552bdb4\"\r\n   
+    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"e296fc65-b495-4e38-91c8-8b450a47856e\"\r\n   
     },\r\n    \"rs\": {\r\n      \"key\": \"gravity\",\r\n      \"type\": \"float\",\r\n     
     \"value\": -25.0\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\":
-    \"ff185f6d-cff8-4009-83dc-cd2463da1b8a\"\r\n    },\r\n    \"rs\": {\r\n     
+    \"b559e23d-caed-45a2-8bd3-3ac14eb60dbc\"\r\n    },\r\n    \"rs\": {\r\n     
     \"key\": \"spawn_zombie\",\r\n      \"type\": \"bool\",\r\n      \"value\": true\r\n   
-    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"97a7432c-087e-4dac-a9d9-08b4e5986987\"\r\n   
+    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"1d88cd68-d8ef-4b36-a39c-1798fb204c9d\"\r\n   
     },\r\n    \"rs\": {\r\n      \"key\": \"coins_amount\",\r\n      \"type\": \"int\",\r\n     
     \"value\": 7\r\n    }\r\n  }\r\n]"
-  _rsLastCachedKeyList: "[\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"529e4b27-b944-42c5-b1e2-f18ae2cdc870\"\r\n   
+  _rsLastCachedKeyList: "[\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"6dc05fb0-9f07-402e-990a-88576a4df670\"\r\n   
     },\r\n    \"rs\": {\r\n      \"key\": \"player_speed\",\r\n      \"type\": \"float\",\r\n     
     \"value\": 2.0\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\":
-    \"ce7cfabd-3057-459c-9440-68b3c9a96681\"\r\n    },\r\n    \"rs\": {\r\n     
+    \"42cc4357-e923-41f2-b6f9-ea5b2240cede\"\r\n    },\r\n    \"rs\": {\r\n     
     \"key\": \"jump_force\",\r\n      \"type\": \"float\",\r\n      \"value\": 7.0\r\n   
-    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"736fee40-cc93-403a-b786-797e9552bdb4\"\r\n   
+    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"e296fc65-b495-4e38-91c8-8b450a47856e\"\r\n   
     },\r\n    \"rs\": {\r\n      \"key\": \"gravity\",\r\n      \"type\": \"float\",\r\n     
     \"value\": -25.0\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\":
-    \"ff185f6d-cff8-4009-83dc-cd2463da1b8a\"\r\n    },\r\n    \"rs\": {\r\n     
+    \"b559e23d-caed-45a2-8bd3-3ac14eb60dbc\"\r\n    },\r\n    \"rs\": {\r\n     
     \"key\": \"spawn_zombie\",\r\n      \"type\": \"bool\",\r\n      \"value\": true\r\n   
-    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"97a7432c-087e-4dac-a9d9-08b4e5986987\"\r\n   
+    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"1d88cd68-d8ef-4b36-a39c-1798fb204c9d\"\r\n   
     },\r\n    \"rs\": {\r\n      \"key\": \"coins_amount\",\r\n      \"type\": \"int\",\r\n     
     \"value\": 7\r\n    }\r\n  }\r\n]"
   _environments: "[\r\n  {\r\n    \"projectId\": \"c768ae61-a5a4-401d-ac70-1c5c000b6476\",\r\n   
