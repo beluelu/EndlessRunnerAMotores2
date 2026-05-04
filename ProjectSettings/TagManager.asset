@@ -7,11 +7,13 @@ TagManager:
   - Obstacle
   - Section
   - Coin
+  - BigObstacle
+  - SmallObstacle
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Obstacle
   - Water
   - UI
   - SmallObstacle

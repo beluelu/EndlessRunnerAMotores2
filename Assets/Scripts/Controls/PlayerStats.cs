@@ -34,7 +34,7 @@ public class PlayerStats : MonoBehaviour
     {
         if (hasShield)
         {
-            Debug.Log("🛡️ daño bloqueado");
+            Debug.Log("daño bloqueado");
             return;
         }
 

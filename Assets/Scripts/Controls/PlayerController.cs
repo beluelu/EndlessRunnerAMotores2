@@ -147,26 +147,30 @@ public class PlayerController : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         PlayerStats stats = GetComponent<PlayerStats>();
-
         int otherLayer = other.gameObject.layer;
 
-
+        
         if (((1 << otherLayer) & smallObstacleLayer) != 0)
         {
-
             if (isGrounded)
             {
                 if (stats != null)
+                {
                     stats.TakeDamage(1);
+
+                    
+                    if (stats.currentLives <= 0)
+                    {
+                        Section.isGameOver = true;
+                    }
+                }
 
                 TriggerStumble();
             }
         }
-
-
+        
         else if (((1 << otherLayer) & bigObstacleLayer) != 0)
         {
-
             if (!playerAnim.isRolling)
             {
                 if (stats != null)
