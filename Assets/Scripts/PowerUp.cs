@@ -6,8 +6,7 @@ public class PowerUp : MonoBehaviour
     {
         Shield,
         DoubleCoins,
-        SecondChance,
-        Heal // ❤️
+        Heal 
     }
 
     public PowerUpType type;
@@ -30,12 +29,8 @@ public class PowerUp : MonoBehaviour
                 stats.ActivateDoubleCoins(duration);
                 break;
 
-            case PowerUpType.SecondChance:
-                stats.ActivateSecondChance();
-                break;
-
             case PowerUpType.Heal:
-                stats.Heal(1); // ❤️ ACA ESTÁ LA MAGIA
+                stats.Heal(1); 
                 break;
         }
 

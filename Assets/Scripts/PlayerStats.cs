@@ -8,7 +8,6 @@ public class PlayerStats : MonoBehaviour
 
     // estados
     public bool hasShield = false;
-    public bool hasSecondChance = false;
     public int coinMultiplier = 1;
 
     private PlayerAnimation playerAnim;
@@ -41,16 +40,6 @@ public class PlayerStats : MonoBehaviour
 
         if (currentLives <= 0)
         {
-            if (hasSecondChance)
-            {
-                hasSecondChance = false;
-                currentLives = 1;
-
-                if (uiHearts != null)
-                    uiHearts.UpdateHearts(currentLives);
-
-                return;
-            }
 
             if (playerAnim != null)
             {
@@ -87,6 +76,12 @@ public class PlayerStats : MonoBehaviour
     public void ActivateDoubleCoins(float duration)
     {
         StartCoroutine(DoubleCoins(duration));
+        Section[] sections = FindObjectsOfType<Section>();
+
+        foreach (Section section in sections)
+        {
+            section.DuplicateCoins();
+        }
     }
 
     IEnumerator DoubleCoins(float duration)
@@ -94,10 +89,5 @@ public class PlayerStats : MonoBehaviour
         coinMultiplier = 2;
         yield return new WaitForSeconds(duration);
         coinMultiplier = 1;
-    }
-
-    public void ActivateSecondChance()
-    {
-        hasSecondChance = true;
     }
 }

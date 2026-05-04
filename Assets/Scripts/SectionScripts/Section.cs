@@ -94,10 +94,17 @@ public class Section : MonoBehaviour
 
         int amount = 5;
 
-        //remote config
         if (RemoteConfigManager.Instance != null)
         {
             amount = RemoteConfigManager.Instance.coinsAmount;
+        }
+
+        // 🔥 multiplicador
+        PlayerStats playerStats = FindObjectOfType <PlayerStats>();
+
+        if (playerStats != null)
+        {
+            amount *= playerStats.coinMultiplier;
         }
 
         for (int i = 0; i < amount; i++)
@@ -130,6 +137,32 @@ public class Section : MonoBehaviour
                 currentCoins.Add(coin);
             }
         }
+    }
+
+    public void DuplicateCoins()
+    {
+        List<GameObject> newCoins = new List<GameObject>();
+
+        foreach (GameObject coin in currentCoins)
+        {
+            if (coin == null) continue;
+
+            Vector3 newPos = coin.transform.position;
+
+            // 👉 pequeño offset para que no se superpongan exacto
+            newPos.x += 0.5f;
+
+            GameObject newCoin = Instantiate(
+                coinPrefab,
+                newPos,
+                coin.transform.rotation,
+                transform
+            );
+
+            newCoins.Add(newCoin);
+        }
+
+        currentCoins.AddRange(newCoins);
     }
 
     void ClearCoins()
