@@ -15,12 +15,16 @@ public class PlayerController : MonoBehaviour
     public float gravity;
 
     public bool isGrounded = true;
+    private CapsuleCollider playerCollider;
+
+    private float originalHeight;
+    private Vector3 originalCenter;
 
     private PlayerAnimation playerAnim;
 
     public static Action IsGameOver;
 
-    // 🔥 NUEVO: Layers
+   
     [Header("Collision Layers")]
     public LayerMask smallObstacleLayer;
     public LayerMask bigObstacleLayer;
@@ -48,6 +52,23 @@ public class PlayerController : MonoBehaviour
         {
             Debug.LogError("No se encontró Swipe en la escena");
         }
+
+        playerCollider = GetComponent<CapsuleCollider>();
+
+        originalHeight = playerCollider.height;
+        originalCenter = playerCollider.center;
+    }
+
+    public void StartRollCollider()
+    {
+        playerCollider.height = originalHeight / 2f;
+        playerCollider.center = new Vector3(0, originalCenter.y / 2f, 0);
+    }
+
+    public void EndRollCollider()
+    {
+        playerCollider.height = originalHeight;
+        playerCollider.center = originalCenter;
     }
 
     void Update()
@@ -145,8 +166,12 @@ public class PlayerController : MonoBehaviour
         // BIG OBSTACLE
         else if (((1 << otherLayer) & bigObstacleLayer) != 0)
         {
-            if (stats != null)
-                stats.TakeDamage(999);
+            // 🔥 SOLO muere si NO está rodando
+            if (!playerAnim.isRolling)
+            {
+                if (stats != null)
+                    stats.TakeDamage(999);
+            }
         }
     }
 

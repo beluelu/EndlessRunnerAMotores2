@@ -6,7 +6,7 @@ public class PlayerAnimation : MonoBehaviour
     private Animator animator;
     private Swipe swipe;
 
-    private bool isRolling = false;
+    public bool isRolling = false;
     private bool isJumping = false;
 
     void Start()
@@ -25,9 +25,10 @@ public class PlayerAnimation : MonoBehaviour
     {
         if (IsBusy()) return;
 
-        Debug.Log("ROLL");
         animator.SetTrigger("Roll");
         isRolling = true;
+
+        GetComponent<PlayerController>().StartRollCollider();
     }
 
     void JumpAnim()
@@ -41,8 +42,9 @@ public class PlayerAnimation : MonoBehaviour
 
     public void EndRoll()
     {
-        Debug.Log("FIN ROLL");
         isRolling = false;
+
+        GetComponent<PlayerController>().EndRollCollider();
     }
 
     public void EndJump()
