@@ -11,7 +11,7 @@ public class PlayerAnimation : MonoBehaviour
 
     void Start()
     {
-        animator = GetComponent<Animator>();
+        animator = GetComponentInChildren<Animator>();
         swipe = FindObjectOfType<Swipe>();
 
         if (swipe != null)
