@@ -6,13 +6,13 @@ public class PlayerStats : MonoBehaviour
     public int maxLives = 3;
     public int currentLives;
 
-    // estados
+    
     public bool hasShield = false;
     public int coinMultiplier = 1;
 
     private PlayerAnimation playerAnim;
 
-    // 🔥 referencia UI
+    
     public UIHearts uiHearts;
 
     public int coins = 0;
@@ -65,7 +65,7 @@ public class PlayerStats : MonoBehaviour
             uiHearts.UpdateHearts(currentLives);
     }
 
-    // -------- POWER UPS --------
+    
 
     public void ActivateShield(float duration)
     {

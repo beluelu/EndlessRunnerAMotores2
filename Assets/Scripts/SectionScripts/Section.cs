@@ -1,7 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using NUnit.Framework;
 using System.Collections;
-using NUnit.Framework;
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Analytics;
 
 public class Section : MonoBehaviour
 {
@@ -19,9 +20,12 @@ public class Section : MonoBehaviour
     [Header("PowerUps")]
     public GameObject[] powerUpPrefabs;
 
+    public static bool isGameOver = false;
+
     private void Start()
     {
-        
+        isGameOver = false;
+
         if (RemoteConfigManager.Instance != null)
         {
             speed = RemoteConfigManager.Instance.playerSpeed;
@@ -187,6 +191,9 @@ public class Section : MonoBehaviour
 
     void Update()
     {
+        
+        if (isGameOver) return;
+
         transform.Translate(Vector3.back * speed * Time.deltaTime);
 
         if (transform.position.z <= -20)
@@ -196,3 +203,4 @@ public class Section : MonoBehaviour
         }
     }
 }
+

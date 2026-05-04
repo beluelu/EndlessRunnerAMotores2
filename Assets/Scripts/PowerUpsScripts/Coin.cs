@@ -21,7 +21,7 @@ public class Coin : MonoBehaviour
 
                 stats.AddCoins(total);
 
-                // 🔥 avisar al GameManager
+                
                 if (GameManager.instance != null)
                 {
                     GameManager.instance.AddCoins(total);

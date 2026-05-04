@@ -24,7 +24,7 @@ public class PlayerController : MonoBehaviour
 
     public static Action IsGameOver;
 
-   
+
     [Header("Collision Layers")]
     public LayerMask smallObstacleLayer;
     public LayerMask bigObstacleLayer;
@@ -33,7 +33,7 @@ public class PlayerController : MonoBehaviour
     {
         playerAnim = GetComponent<PlayerAnimation>();
 
-        
+
         if (RemoteConfigManager.Instance != null)
         {
             jumpForce = RemoteConfigManager.Instance.jumpForce;
@@ -150,10 +150,10 @@ public class PlayerController : MonoBehaviour
 
         int otherLayer = other.gameObject.layer;
 
-        
+
         if (((1 << otherLayer) & smallObstacleLayer) != 0)
         {
-            
+
             if (isGrounded)
             {
                 if (stats != null)
@@ -163,14 +163,17 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        
+
         else if (((1 << otherLayer) & bigObstacleLayer) != 0)
         {
-            
+
             if (!playerAnim.isRolling)
             {
                 if (stats != null)
                     stats.TakeDamage(999);
+
+                
+                Section.isGameOver = true;
             }
         }
     }
