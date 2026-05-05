@@ -40,7 +40,7 @@ public class PlayerController : MonoBehaviour
             gravity = RemoteConfigManager.Instance.gravity;
         }
 
-        Swipe swipe = FindObjectOfType<Swipe>();
+        Swipe swipe = FindAnyObjectByType<Swipe>();
 
         if (swipe != null)
         {
