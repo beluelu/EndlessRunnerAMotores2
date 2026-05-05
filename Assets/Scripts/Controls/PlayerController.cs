@@ -74,7 +74,7 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         if (playerAnim != null && playerAnim.isDead) return;
-        if (playerAnim != null && playerAnim.isStumbling) return;
+        
 
         float targetX = 0;
 
