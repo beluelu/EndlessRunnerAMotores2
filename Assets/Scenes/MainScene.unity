@@ -4202,7 +4202,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f6ee3158aeb4904286349ad24c17625, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hearts:
+  heartModels:
   - {fileID: 771847424}
   - {fileID: 182629278}
   - {fileID: 373113364}
@@ -7786,6 +7786,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isRolling: 0
+  characterModel: {fileID: 2098314561}
+  blinkDuration: 1.5
+  blinkInterval: 0.1
   isStumbling: 0
   isDead: 0
 --- !u!114 &942618071
@@ -7804,7 +7807,7 @@ MonoBehaviour:
   currentLives: 0
   hasShield: 0
   coinMultiplier: 1
-  uiHearts: {fileID: 0}
+  uiHearts: {fileID: 443633785}
   coins: 0
   uiCoins: {fileID: 0}
 --- !u!114 &942618072
