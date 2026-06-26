@@ -30,6 +30,21 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("GANASTE");
 
+        
+        if (DataManager.Instance != null)
+        {
+            
+            DataManager.Instance.currency += currentCoins;
+
+            
+            DataManager.Instance.SaveData();
+        }
+        else
+        {
+            
+            Debug.LogWarning("DataManager no encontrado. Entrá desde el menú principal para que guarde.");
+        }
+
         victoryPanel.SetActive(true);
 
         Time.timeScale = 0f;
