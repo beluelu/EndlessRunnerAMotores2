@@ -110,8 +110,8 @@ public class Section : MonoBehaviour
             amount = RemoteConfigManager.Instance.coinsAmount;
         }
 
-
-        PlayerStats playerStats = FindAnyObjectByType<PlayerStats>();
+        
+        PlayerStats playerStats = FindObjectOfType <PlayerStats>();
 
         if (playerStats != null)
         {

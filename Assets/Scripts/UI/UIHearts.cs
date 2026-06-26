@@ -3,21 +3,13 @@ using UnityEngine.UI;
 
 public class UIHearts : MonoBehaviour
 {
-    public GameObject[] heartModels;
+    public GameObject[] hearts;
 
     public void UpdateHearts(int currentLives)
     {
-        for (int i = 0; i < heartModels.Length; i++)
+        for (int i = 0; i < hearts.Length; i++)
         {
-            
-            if (i < currentLives)
-            {
-                heartModels[i].SetActive(true);
-            }
-            else
-            {
-                heartModels[i].SetActive(false);
-            }
+            hearts[i].SetActive(i < currentLives);
         }
     }
 }

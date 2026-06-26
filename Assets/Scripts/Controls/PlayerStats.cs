@@ -82,7 +82,7 @@ public class PlayerStats : MonoBehaviour
     public void ActivateDoubleCoins(float duration)
     {
         StartCoroutine(DoubleCoins(duration));
-        Section[] sections = FindObjectsByType<Section>(FindObjectsSortMode.None);
+        Section[] sections = FindObjectsOfType<Section>();
 
         foreach (Section section in sections)
         {

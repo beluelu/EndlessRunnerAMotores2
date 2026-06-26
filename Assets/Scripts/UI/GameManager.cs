@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         instance = this;
-        Time.timeScale = 1f;
+        Time.timeScale = 1f; // 🔥 FIX
     }
 
     public void AddCoins(int amount)
